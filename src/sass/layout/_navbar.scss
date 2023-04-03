@@ -1,0 +1,60 @@
+.navbar {
+  background-color: $black;
+  color: $white;
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-progress {
+    height: 0.5rem;
+    width: 2%;
+    background-color: $blue;
+
+  }
+
+  &-list {
+    list-style: none;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+
+
+    @include respond(sm) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__item {
+      margin-left: 2rem;
+
+      @include respond(sm) {
+        margin-left: 0;
+      }
+    }
+
+    &__itemlink {
+      color: $white;
+      text-decoration: none;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+[data-target="nav-content"] {
+  visibility: hidden;
+  height: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.slide {
+  transform: scaleY(1);
+  visibility: visible;
+  height: auto;
+}

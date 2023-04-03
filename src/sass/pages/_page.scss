@@ -1,0 +1,12 @@
+.page-section {
+  height: 80vh;
+  min-height: 80vh;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  background-color: $grey;
+
+  &__header {
+    font-size: 2rem;
+    font-weight: normal;
+  }
+}
